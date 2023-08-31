@@ -4,9 +4,10 @@ require('../connection/connection.php');
 $nombre= $_POST['nombre'];
 $email= $_POST['email'];
 $telefono= $_POST['telefono'];
-print("Usuario: " .$nombre. " email: " . $email . " telefono: " . $telefono);
+$mensaje= $_POST['mensaje'];
+print("Usuario: " .$nombre. " email: " . $email . " telefono:" . $telefono . "mensaje:" . $mensaje);
 
-$query = "INSERT INTO usuario (nombre, email, telefono) VALUES ('$nombre','$email','$telefono')";
+$query = "INSERT INTO usuario (nombre, email, telefono, mensaje) VALUES ('$nombre','$email','$telefono','$mensaje')";
 
 $ejecutar = mysqli_query($connection, $query);
 
